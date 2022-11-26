@@ -17,7 +17,7 @@ public class CutoutObject : MonoBehaviour
     {
         var position = target.position;
         var cutoutPos = _camera.WorldToViewportPoint(position);
-        cutoutPos.y /= (float) Screen.width / Screen.height;
+        cutoutPos.y /=  Screen.width / Screen.height;
 
         var offset = position - transform.position;
         var size = Physics.RaycastNonAlloc(transform.position, offset, _hits, offset.magnitude, wallMask);
